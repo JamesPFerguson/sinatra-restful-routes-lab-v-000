@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
     @recipe.cook_time = params[:cook_time]
     @recipe.save
 
-    erb :show
+    redirect "/recipes/#{recipe.id}"
 
   end
 
